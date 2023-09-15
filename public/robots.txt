@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wrestlingworld.co
+
+# Sitemaps
+Sitemap: https://wrestlingworld.co/sitemap.xml

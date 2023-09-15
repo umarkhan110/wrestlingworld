@@ -1,0 +1,167 @@
+.Footer__news__wraper:hover .footer_news_title {
+  text-decoration: underline;
+  text-decoration-color: #ce061e;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+}
+
+.conetnt_blog {
+  padding-bottom: 20px;
+}
+
+.conetnt_blog strong {
+  font-weight: 800;
+}
+
+.conetnt_blog a {
+  color: #ce061e;
+  font-weight: 600;
+}
+
+.wp-block-separator {
+  padding-bottom: 2px;
+}
+
+.conetnt_blog h2 {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: Khand;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.conetnt_blog h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  font-family: Khand;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.wp-block-embed {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.wp-block-quote {
+  border-left: 0.25em solid #ce061e !important;
+  margin-top: 10px !important;
+}
+
+.wp-block-separator {
+  margin-bottom: 20px;
+}
+
+div img {
+  border-radius: 4px !important;
+}
+
+.conetnt_blog h2,
+h4,
+h3,
+h5 {
+  font-family: 'Khand', sans-serif;
+}
+
+
+.conetnt_blog ul {
+  list-style: revert !important;
+  margin-left: 20px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+
+.conetnt_blog .twitter-tweet {
+  margin: auto;
+}
+
+.wp-block-image {
+  padding-bottom: 26px;
+}
+
+.conetnt_blog p {
+  padding-bottom: 26px;
+}
+
+.twitter-tweet iframe {
+  border-radius: 12px;
+}
+
+.wp-block-quote p {
+  padding-bottom: 0px;
+}
+
+.Sidebar_wraper {
+  box-shadow: 0 0 15px 2px #eaeaea;
+}
+
+
+/* footer news ticker  */
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-wrapper {
+  width: 100%;
+  padding-left: 100%;
+  background-color: transparent;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-transition {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 20s;
+}
+
+.ticker-transition:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+
+.instagram-media{
+  margin: auto !important;
+  /* height: 968px !important; */
+}
+
+#b73c5735-1c49-4c22-a0d9-27fe68581404{
+  height: 280px !important;
+}
+/* 
+  360
+  680
+  768
+  1024
+  1280
+  1536
+*/

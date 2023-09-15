@@ -1,0 +1,40 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    - name: Copy dist to VPS
+      uses: appleboy/scp-action@master
+      with:
+        host: 67.205.135.214
+        username: root
+        port: 22
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        # Selecting all folders except "node_modules"
+        source: ".,!node_modules"
+        # The path is based on the directory where the user logged into the server starts
+        target: "/root/out"
+
+    - name: SSH into VPS
+      uses: appleboy/ssh-action@master
+      with:
+        host: 67.205.135.214
+        username: root
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          source /root/.nvm/nvm.sh
+          pm2 stop all || : && pm2 delete all ||: && echo "process stopped"
+          npm -v
+          node -v
+          rm -rf /root/app && echo "Folder removed"
+          sudo mv /root/out /root/app && echo "Folder Moved"
+          cd /root/app && npm i &&  npm run build && echo "Build successful"
+          cd /root/app && pm2 start npm --name "app" -- start
